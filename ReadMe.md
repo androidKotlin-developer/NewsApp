@@ -8,4 +8,8 @@ With the help of the API you can get the news from the internet, and i am using 
 -Gson: This library is used for parse the data from JSON to model class.
 -Glide: This is a library that helps us to load img from URL.
 
-Video link :- https://www.loom.com/share/761fd609d9af465a9df846e9ebdda657
+
+
+
+https://user-images.githubusercontent.com/105920091/173831743-2008d043-2cca-400f-9ca1-4a6674a2fc27.mp4
+
