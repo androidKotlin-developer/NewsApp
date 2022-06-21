@@ -63,6 +63,8 @@ dependencies {
     // Fragment
     implementation 'androidx.fragment:fragment-ktx:1.4.1'
 
+    implementation 'com.razorpay:checkout:1.6.4'
+
 
 
 }

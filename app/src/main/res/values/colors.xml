@@ -10,4 +10,6 @@
     <color name="gray">#F4F4F4</color>
     <color name="gray1">#DAD8D8</color>
     <color name="blue">#1968B3</color>
+    <color name="red">#F41818</color>
+    <color name="transpernt">#00F41818</color>
 </resources>

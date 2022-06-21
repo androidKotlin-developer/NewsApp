@@ -3,19 +3,14 @@ package com.example.newsapp.util
 import android.content.Context
 import android.text.format.DateUtils
 import android.widget.Toast
+import com.example.quizapp.utill.Constant.input_format
+import com.example.quizapp.utill.Constant.output_format
 import java.sql.Timestamp
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 
-object Utils {
-
-    const val BASE_URL = "https://newsapi.org/v2/"
-    const val country_name = "in"
-    const val api_key = "185b4546056d48cdabf7e4cfe14a7620"
-    const val input_format = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    const val output_format = "yyyy-MM-dd hh:mm:ss"
-
+object Utill {
 
     fun Context.toast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
@@ -41,4 +36,15 @@ object Utils {
             System.currentTimeMillis(),
             DateUtils.MINUTE_IN_MILLIS)
     }
+
+    fun nullChecker(string: String?): String? {
+        var returnString: String? = ""
+        if (string != null && string.isNotEmpty() && !string.contains("null")) {
+            returnString = string
+        }
+        return returnString
+    }
+
+
+
 }

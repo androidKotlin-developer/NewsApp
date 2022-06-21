@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:shadowRadius="50">
+    android:orientation="vertical"
+    android:shadowRadius="50"
+    android:id="@+id/ll_layout">
+
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -14,7 +18,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
-        android:background="@drawable/round_corner"
+        android:background="@color/white"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -73,7 +77,8 @@
                 android:layout_marginEnd="30dp"
                 app:cardCornerRadius="5dp"
                 android:layout_width="60dp"
-                android:layout_height="60dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent">
 
