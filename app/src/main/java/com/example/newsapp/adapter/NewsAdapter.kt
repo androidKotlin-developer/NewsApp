@@ -12,12 +12,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.example.newsapp.R
+import com.example.newsapp.fragment.FavFragment
 import com.example.newsapp.model.Article
 import com.example.newsapp.util.CustomView
 import com.example.newsapp.util.Utill
 import com.example.quizapp.callback.ISC_AlertClickPositiveOnly
 
-class NewsAdapter(  newslist : List<Article> , private val context: Context) :
+class NewsAdapter(newslist: List<Article>, private val context: Context, ) :
     RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
     private var listdata : MutableList<Article> = newslist.toMutableList()
 
@@ -63,12 +64,14 @@ class NewsAdapter(  newslist : List<Article> , private val context: Context) :
                 .transform(CenterCrop())
                 .into(img)
         }
+
     }
 
     fun deleteItem(index: Int) {
         listdata.removeAt(index)
         notifyDataSetChanged()
     }
+
 }
 
 

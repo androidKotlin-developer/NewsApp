@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -74,9 +75,12 @@ class HomeFragment : Fragment() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if (p0!!.isEmpty()) {
                     viewModel.GetNewsList()
-                } else viewModel.SearchNews(p0.toString())
+                }
+                else viewModel.SearchNews(p0.toString())
             }
             override fun afterTextChanged(p0: Editable?) {}
         })
     }
+
+
 }

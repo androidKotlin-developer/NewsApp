@@ -6,11 +6,13 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.newsapp.R
 import com.example.newsapp.adapter.NewsAdapter
 import com.example.newsapp.behavior.SwipeToDeleteCallback
 import com.example.newsapp.databinding.FragmentFavBinding
@@ -20,7 +22,7 @@ import com.example.newsapp.repository.NewsRepo
 import com.example.newsapp.viewmodel.NewsViewModelFactory
 import com.example.newsapp.viewmodel.ViewModelNews
 
-class FavFragment : Fragment(){
+class FavFragment : Fragment() {
 
     lateinit var binding: FragmentFavBinding
     lateinit var viewModel: ViewModelNews
@@ -48,6 +50,7 @@ class FavFragment : Fragment(){
         binding.totalFavCount.text = item.toString()
         binding.favRecyclerview.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         myadapter!!.notifyDataSetChanged()
+
 
         val swipeHandler = object : SwipeToDeleteCallback(context!!) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
